@@ -1,0 +1,12 @@
+[ignore]
+.*.json
+.*/__tests__/.*
+.*/coverage/.*
+.*/node_modules/.*
+
+[include]
+
+[libs]
+
+[options]
+suppress_comment= \\(.\\|\n\\)*\\$FlowExpectedError

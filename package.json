@@ -1,0 +1,34 @@
+{
+  "name": "Enumjs",
+  "version": "1.0.0",
+  "description": "A simple function for creating enum object in javascript",
+  "main": "index.js",
+  "author": "Ryan Albrecht",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryan953/enumjs.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "enum",
+    "enumerate",
+    "constant",
+    "typed",
+    "util",
+    "utility"
+  ],
+  "devDependencies": {
+    "jest": "^14.1.0",
+    "object.entries": "^1.0.3",
+    "object.values": "^1.0.3"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
+    ]
+  }
+}

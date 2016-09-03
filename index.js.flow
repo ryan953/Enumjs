@@ -1,0 +1,14 @@
+/* @flow */
+
+type EnumDefinition<T> = {[key: $Enum<T>]: $Enum<T>};
+
+declare type Enum<T> = {
+  [key: $Enum<T>]: $Enum<T>,
+  forEach: (iter: (val: $Enum<T>) => void) => void,
+};
+
+declare module.exports: {
+  make: (dfn: EnumDefinition<*>) => Enum<*>,
+  coalesce: (enum: Enum<*>, field: $Enum<*>) => ?$Enum<*>,
+  enforce: (enum: Enum<*>, field: $Enum<*>) => $Enum<*>,
+};
