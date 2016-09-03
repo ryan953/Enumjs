@@ -58,7 +58,7 @@ console.log(Enum.enforce(Suits, 'SPADE'))
 console.log(Enum.enforce(Suits, 'bizbaz')) // throws Error
 ```
 
-## Flow.js Types
+## [Flow Types](https://flowtype.org/)
 
 To turn Enum objects into flow types simply create a flow type using the `$Keys` feature:
 
