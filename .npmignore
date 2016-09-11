@@ -1,3 +1,6 @@
-__tests__/
-jest/
 .log
+__tests__/
+coverage/
+flow/
+jest/
+node_modules/
