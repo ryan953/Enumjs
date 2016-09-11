@@ -60,6 +60,13 @@ console.log(Enum.enforce(Suits, 'bizbaz')) // throws Error
 
 ## [Flow Types](https://flowtype.org/)
 
+Configure flow by adding the path to Enumjs/interfaces into your .flowconfig file:
+
+```
+[libs]
+node_modules/Enumjs/interfaces/
+```
+
 To turn Enum objects into flow types simply create a flow type using the `$Keys` feature:
 
 ```js
