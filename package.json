@@ -1,6 +1,6 @@
 {
   "name": "Enumjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple function for creating enum object in javascript",
   "main": "index.js",
   "author": "Ryan Albrecht",
