@@ -1,4 +1,4 @@
-## Enumjs
+## Enumjs [![Build Status](https://travis-ci.org/ryan953/Enumjs.svg?branch=master)](https://travis-ci.org/ryan953/Enumjs)
 
 Create an enum from a object of key/values.
 
