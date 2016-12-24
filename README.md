@@ -31,12 +31,12 @@ const Suits = Enum({
 });
 ```
 
-Your new Enum is a plain object that's been frozen so no one can edit the fields or values on it. It is enumerable, immutable, and you can the `in` operator, `hasOwnProperty()` just like normal.
+Your new Enum is a plain object that's been frozen so no one can edit the fields or values on it. It is enumerable, immutable, and you can use the `in` operator, `hasOwnProperty()` just like normal.
 
 ```js
 console.log('HEART' in Suits)
 -> true
-console.log(Suits.hasOwnProperty('HEART')
+console.log(Suits.hasOwnProperty('HEART'))
 -> true
 console.log(Suits.HEART)
 -> 'HEART'
@@ -95,5 +95,5 @@ Within `index.js` some new methods are used that are not available on older brow
 [`Object.freeze`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
 [`Object.values`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
 
-For Tests:
-Similarly the test file also requires `Object.keys`.
+Unit Tests:
+The tests also requires [`Object.keys`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
