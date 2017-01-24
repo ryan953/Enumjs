@@ -9,6 +9,7 @@
     "type": "git",
     "url": "https://github.com/ryan953/enumjs.git"
   },
+  "bugs": "https://github.com/ryan953/enumjs/issues",
   "scripts": {
     "test": "jest"
   },
