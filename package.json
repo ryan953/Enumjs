@@ -22,7 +22,7 @@
     "utility"
   ],
   "devDependencies": {
-    "jest": "^14.1.0",
+    "jest": "^18.1.0",
     "object.entries": "^1.0.3",
     "object.values": "^1.0.3"
   },
