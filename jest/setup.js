@@ -8,4 +8,4 @@ if (!Object.values) {
   values.shim();
 }
 
-global.__DEV__ = false;
+global.__DEV__ = true;

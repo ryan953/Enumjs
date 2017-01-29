@@ -25,6 +25,17 @@ const Ranks = {
   'KING': 'KING',
   'ACE': 'ACE',
 };
+const NonEnums = [
+  null,
+  0,
+  1,
+  'hello',
+  {},
+  [1, 2, 3],
+  new Error('error'),
+  function() {},
+  NaN,
+];
 
 describe('Enum', () => {
   testEnum('Suits', Enum.make(Suits), Suits);
@@ -43,6 +54,12 @@ describe('Enum', () => {
 
     it('Should be case sensitive checking fields inside object', () => {
       expect(Enum.coalesce(SuitsType, 'Heart')).toBeNull();
+    });
+
+    NonEnums.forEach((value) => {
+      it('Should return null for non-enum: ' + value, () => {
+        expect(Enum.coalesce(value, 'one')).toBeNull();
+      });
     });
   });
 
@@ -63,6 +80,14 @@ describe('Enum', () => {
       expect(
         () => Enum.enforce(SuitsType, 'Heart')
       ).toThrow();
+    });
+
+    NonEnums.forEach((value) => {
+      it('Should throw when non-enum: ' + value, () => {
+        expect(
+          () => Enum.enforce(value, 'one')
+        ).toThrow();
+      });
     });
   });
 });

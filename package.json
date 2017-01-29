@@ -11,6 +11,7 @@
   },
   "bugs": "https://github.com/ryan953/enumjs/issues",
   "scripts": {
+    "pretest": "flow check",
     "test": "jest"
   },
   "keywords": [
@@ -22,7 +23,8 @@
     "utility"
   ],
   "devDependencies": {
-    "jest": "^14.1.0",
+    "flow-bin": "^0.38.0",
+    "jest": "^18.1.0",
     "object.entries": "^1.0.3",
     "object.values": "^1.0.3"
   },

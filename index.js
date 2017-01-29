@@ -24,7 +24,11 @@ var define = global.define || null;
     },
 
     coalesce: function(obj, field) {
-      if (field in obj || field in Object.values(obj)) {
+      if (
+        obj &&
+        typeof obj === 'object' &&
+        (field in obj || field in Object.values(obj))
+      ) {
         return field;
       }
       return null;
@@ -38,7 +42,7 @@ var define = global.define || null;
       if (__DEV__) {
         throw new Error('Value ' + field + ' not found in object ' + obj);
       } else {
-        throw new Error('Invalid Enum');
+        throw new Error('Invalid Enum.');
       }
     },
   };
