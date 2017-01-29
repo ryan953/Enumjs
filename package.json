@@ -11,6 +11,7 @@
   },
   "bugs": "https://github.com/ryan953/enumjs/issues",
   "scripts": {
+    "pretest": "flow check",
     "test": "jest"
   },
   "keywords": [
