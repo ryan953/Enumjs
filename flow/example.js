@@ -12,7 +12,11 @@ var Suits = Enum.make({
 });
 
 var heart = Enum.coalesce(Suits, 'HEART');
-var throwshere = Enum.enforce(Suits, 'BAR');
+try {
+  var throwshere = Enum.enforce(Suits, 'BAR');
+} catch (err) {
+  // err == 'Invalid Enum'
+}
 
 // $FlowExpectedError
 Enum.coalesce(Suits, 1);
@@ -22,6 +26,8 @@ Enum.coalesce({}, 'rawr');
 Enum.coalesce([], 'rawr');
 // $FlowExpectedError
 Enum.coalesce('string', 'rawr');
+// $FlowExpectedError
+Enum.coalesce(null, 'rawr');
 
 var clubdot = Suits.CLUB;
 var clubsquare = Suits['CLUB'];
