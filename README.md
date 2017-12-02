@@ -74,20 +74,13 @@ To turn Enum objects into flow types simply create a flow type using the `$Keys`
 
 ```js
 type SuitType = $Keys<typeof Suits>;
+
 ```
 
-If your values are not the same as the keys then you'll probably just want to type out the flow type as a union of values.
+If your values are not the same as the keys then you can use `$Keys` and `$Values` to differentiate between the two sets:
 ```js
-const Suits = Enum({
-  HEART: 'suit_hearts',
-  DIAMOND: 'suit_diamonds',
-  SPADE: 'suit_spades',
-  CLUB: 'suit_clubs',
-});
-
-type SuitType =
-  'suit_diamonds' | 'suit_diamonds' |
-  'suit_spades' | 'suit_clubs';
+type SuitType = $Keys<typeof Suits>;
+type SuitValue = $Values<typeof Suits>;
 ```
 
 ## Polyfills
