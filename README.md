@@ -26,7 +26,7 @@ Once the package is installed you can create instances by passing the key/value 
 ```js
 var Enum = require('Enumjs');
 
-const Suits = Enum({
+const Suits = Enum.make({
   HEART: 'HEART',
   DIAMOND: 'DIAMOND',
   SPADE: 'SPADE',
