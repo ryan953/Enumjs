@@ -24,7 +24,7 @@
   ],
   "devDependencies": {
     "flow-bin": "^0.76.0",
-    "jest": "^21.0.0",
+    "jest": "^22.1.4",
     "object.entries": "^1.0.3",
     "object.values": "^1.0.3"
   },
