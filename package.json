@@ -30,6 +30,7 @@
   },
   "jest": {
     "automock": false,
+    "testURL": "http://localhost/",
     "setupFiles": [
       "<rootDir>/jest/setup.js"
     ]
