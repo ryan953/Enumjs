@@ -25,8 +25,8 @@
   "devDependencies": {
     "flow-bin": "^0.89.0",
     "jest": "^22.1.4",
-    "object.entries": "^1.0.3",
-    "object.values": "^1.0.3"
+    "object.entries": "^1.1.0",
+    "object.values": "^1.1.0"
   },
   "jest": {
     "automock": false,
