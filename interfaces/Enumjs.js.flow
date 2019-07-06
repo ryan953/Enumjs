@@ -1,16 +1,16 @@
 /* @flow */
 
-type EnumDefinition<T> = {[key: $Enum<T>]: $Enum<T>};
+type EnumDefinition<T> = {[key: $Keys<T>]: $Keys<T>};
 
 declare type Enum<T> = {
-  [key: $Enum<T>]: $Enum<T>,
-  forEach: (iter: (val: $Enum<T>) => void) => void,
+  [key: $Keys<T>]: $Keys<T>,
+  forEach: (iter: (val: $Keys<T>) => void) => void,
 };
 
 declare module 'Enumjs' {
   declare module.exports: {
     make: (dfn: EnumDefinition<*>) => Enum<*>,
-    coalesce: (obj: Enum<*>, field: ?$Enum<*>) => ?$Enum<*>,
-    enforce: (obj: Enum<*>, field: $Enum<*>) => $Enum<*>,
+    coalesce: (obj: Enum<*>, field: ?$Keys<*>) => ?$Keys<*>,
+    enforce: (obj: Enum<*>, field: $Keys<*>) => $Keys<*>,
   };
 };
