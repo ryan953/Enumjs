@@ -23,7 +23,7 @@
     "utility"
   ],
   "devDependencies": {
-    "flow-bin": "^0.102.0",
+    "flow-bin": "^0.105.1",
     "jest": "^22.1.4",
     "object.entries": "^1.1.0",
     "object.values": "^1.1.0"
